@@ -4,11 +4,11 @@
   <version>0.0.1</version>
   <description>The depth_mtf package</description>
 
-  <maintainer email="ohsh@meerecompany.com">SeoHwan Oh</maintainer>
+  <maintainer email="ohsh@meerecompany.com">Seohwan Oh</maintainer>
 
   <license>LGPLv3</license>
 
-  <author email="ohsh@meerecompany.com">SeoHwan Oh</author>
+  <author email="ohsh@meerecompany.com">Seohwan Oh</author>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roscpp</build_depend>
