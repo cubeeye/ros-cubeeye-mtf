@@ -44,7 +44,7 @@ Operating Test
 $rqt
 /depth/mtf/amplitude_raw, /depth/mtf/depth_raw
 ```
-<p align="center"><img width=50% src="https://user-images.githubusercontent.com/18589471/67537195-4d1a0400-f6a8-11e9-8768-5fcf0e612862.png"/></p>
+<p align="center"><img width=100% src="https://user-images.githubusercontent.com/18589471/67537195-4d1a0400-f6a8-11e9-8768-5fcf0e612862.png"/></p>
 
 ```bash
 $rosrun rviz rviz
