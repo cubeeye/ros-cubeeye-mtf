@@ -51,7 +51,7 @@ $rosrun rviz rviz
 Fixed Frame : pcl
 PointCloud2 : /depth/mtf/points
 ```
-<p align="center"><img width=100% src="https://user-images.githubusercontent.com/18589471/67537413-463fc100-f6a9-11e9-981e-fea1f0cb64e5.png"/></p>
+<p align="center"><img width=100% src="https://user-images.githubusercontent.com/18589471/67537595-1a710b00-f6aa-11e9-8768-f5e8da62224b.png"/></p>
 
 Using Dynamic Reconfigure Params
 ```bash
