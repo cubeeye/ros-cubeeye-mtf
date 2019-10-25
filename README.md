@@ -27,6 +27,7 @@ $catkin_make -DCMAKE_BUILD_TYPE=Release
 $sudo mtfinstall.sh
 
 ##Usage Instructions
+
 Start the camera node
 Connect the camera power and execute the following command
 
