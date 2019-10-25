@@ -1,9 +1,6 @@
 # CUBE EYE ToF camera ROS driver(MTF device)
 These are packages for using MTF device with ROS
-- ### MDC200S
-- ### MDC600S
-- ### MDC200D
-- ### MDC500D
+- #### MDC200S, MDC600S, MDC200D, MDC500D
 
 Please refer to our website [http://www.cube-eye.co.kr](http://www.cube-eye.co.kr) for detailed product specifications.
 
