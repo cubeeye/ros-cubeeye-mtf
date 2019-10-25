@@ -34,12 +34,12 @@ Connect the camera power and execute the following command
 $roslaunch depth_mtf depth_camera.launch
 ```
 
-### Topics
+#### Topics
 - /depth/mtf/amplitude_raw : IR Image
 - /depth/mtf/depth_raw : Depth Image
 - /detph/mtf/points : Point Cloud Image
 
-### Operating Test
+#### Operating Test
 ```bash
 $rqt
 /depth/mtf/amplitude_raw, /depth/mtf/depth_raw
@@ -53,7 +53,7 @@ PointCloud2 : /depth/mtf/points
 ```
 <p align="center"><img width=100% src="https://user-images.githubusercontent.com/18589471/67537595-1a710b00-f6aa-11e9-8768-f5e8da62224b.png"/></p>
 
-### Using Dynamic Reconfigure Params
+#### Using Dynamic Reconfigure Params
 ```bash
 $rosrun rqt_reconfigure rqt_reconfigure
 ```
