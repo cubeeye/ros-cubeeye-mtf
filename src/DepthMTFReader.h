@@ -7,9 +7,9 @@
 #define MTF_WIDTH 320
 #define MTF_HEIGHT 240
 
-#define PUB_DEPTH "/depth/mtf/depth_raw"
-#define PUB_AMPLITUDE "/depth/mtf/amplitude_raw"
-#define PUB_PCL "/depth/mtf/points"
+#define PUB_DEPTH "/cubeeye/mtf/depth_raw"
+#define PUB_AMPLITUDE "/cubeeye/mtf/amplitude_raw"
+#define PUB_PCL "/cubeeye/mtf/points"
 
 class DepthMTFReader
 {

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>depth_mtf</name>
+  <name>cubeeye_mtf</name>
   <version>1.0.0</version>
   <description>These are packages for using MTF device with ROS.(Support model : MDC200S, MDC600S, MDC200D, MDC500D)</description>
 

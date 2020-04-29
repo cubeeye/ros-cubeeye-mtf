@@ -1,11 +1,9 @@
 <launch>
-    <arg name="pkg_name" default="depth_mtf"/>
-    <arg name="debug" default="false"/>
+    <arg name="pkg_name" default="cubeeye_mtf"/>
     <arg name="setMDCParam" default="false"/>
 
-    <node name="depth_camera" pkg="$(arg pkg_name)" type="depth_mtf_node" output="screen">
+    <node name="cubeeye_camera" pkg="$(arg pkg_name)" type="cubeeye_mtf_node" output="screen">
         <param name="pkg_name" value="$(arg pkg_name)"/>
-        <param name="debug" value="$(arg debug)"/>
         <param name="setMDCParam" value="$(arg setMDCParam)"/>
 
     </node>
