@@ -92,30 +92,15 @@ bool DepthMTFReader::connect()
 
     if (setMTFParam)
     {
-        // adjust parameters                
-        m_nInteg = mtfGetIntegrationTime(m_DevHnd);
-        if (debug)
-            ROS_INFO("IntegrationTime : %d  ", m_nInteg);
+        //parameters
+        m_nAmplitude = mtfGetCheckThreshold(m_DevHnd);        
+        ROS_INFO("Amplitude Threshold : %d  ", m_nAmplitude);
 
-        m_nAmplitude = mtfGetCheckThreshold(m_DevHnd);
-        if (debug)
-            ROS_INFO("Amplitude Threshold : %d  ", m_nAmplitude);
+        m_nScattering = mtfGetScatterThreshold(m_DevHnd);        
+        ROS_INFO("Scattering Threshold : %d", m_nScattering);
 
-        m_nScattering = mtfGetScatterThreshold(m_DevHnd);
-        if (debug)
-            ROS_INFO("Scattering Threshold : %d", m_nScattering);
-
-        m_nDelay = mtfGetFPSDelay(m_DevHnd);
-        if (debug)
-            ROS_INFO("FPSDelay : %d", m_nDelay);
-
-        m_nOffset = mtfGetOffset(m_DevHnd);
-        if (debug)
-            ROS_INFO("Offset : %d", m_nOffset);
-
-        mtfGetDepthRange(m_DevHnd, &m_nMinDepth, &m_nMaxDepth);
-        if (debug)
-            ROS_INFO("Depth range : %d - %d : unit=mm", m_nMinDepth, m_nMaxDepth);
+        mtfGetDepthRange(m_DevHnd, &m_nMinDepth, &m_nMaxDepth);        
+        ROS_INFO("Depth range : %d - %d : unit=mm", m_nMinDepth, m_nMaxDepth);
 
     }
     return true;
@@ -181,23 +166,17 @@ int DepthMTFReader::GetDepthData()
     return nRet;
 }
 
-int DepthMTFReader::setAmplitudeThreshold()
+int DepthMTFReader::SetAmplitudeThreshold()
 {
     int nRet;
     nRet = mtfSetCheckThreshold(m_DevHnd, m_nAmplitude);
     return nRet;
 }
 
-int DepthMTFReader::setScatteringCheckThreshold()
+int DepthMTFReader::SetScatteringCheckThreshold()
 {
     int nRet;
     nRet = mtfSetScatterThreshold(m_DevHnd, m_nScattering);
     return nRet;
 }
 
-int DepthMTFReader::setPhaseOffset()
-{
-    int nRet;
-    nRet = mtfSetOffset(m_DevHnd, m_nOffset);
-    return nRet;
-}

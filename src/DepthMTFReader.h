@@ -23,17 +23,13 @@ class DepthMTFReader
     float* m_pAmplitudeData;
 
 
-  public:
-    bool debug;
+  public:    
     bool setMTFParam;
     int m_nWidth;
     int m_nHeight;
     int m_nMinDepth, m_nMaxDepth;
-    int m_nInteg;
     int m_nAmplitude;
     int m_nScattering;
-    int m_nDelay;
-    int m_nOffset;
     bool mLoopOk;
 
     unsigned short *mCameraBuf[IMAGE_NUM];
@@ -44,9 +40,9 @@ class DepthMTFReader
     bool close();
 
     int GetDepthData();
-    int setAmplitudeThreshold();
-    int setScatteringCheckThreshold();
-    int setPhaseOffset();
+    int SetAmplitudeThreshold();
+    int SetScatteringCheckThreshold();
+
 
     ros::Publisher &m_PubDepthRaw;
     ros::Publisher &m_PubAmplitudeRaw;

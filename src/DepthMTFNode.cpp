@@ -24,16 +24,13 @@ void callbackConfig(depth_mtf_node::depth_mtfConfig &config, uint32_t level)
     {
     case 1:
         mr->m_nAmplitude = config.Amplitude;
-        mr->setAmplitudeThreshold();
+        mr->SetAmplitudeThreshold();
         break;
     case 2:
         mr->m_nScattering = config.Scattering;
-        mr->setScatteringCheckThreshold();
+        mr->SetScatteringCheckThreshold();
         break;
-    case 3:
-        mr->m_nOffset = config.Offset;
-        mr->setPhaseOffset();
-        break;
+
     default:
         break;
     }
@@ -57,16 +54,14 @@ int main(int argc, char **argv)
 
     mr = new DepthMTFReader(pub_depth_raw,pub_amplitude_raw,pub_pcl_raw);
 
-    nh.getParam("/depth_camera/debug", mr->debug);
-    nh.getParam("/depth_camera/setMTFParam", mr->setMTFParam);
-    nh.getParam("/depth_camera/integ_time", mr->m_nInteg);
-    nh.getParam("/depth_camera/offset", mr->m_nOffset);
+
+    nh.getParam("/depth_camera/setMTFParam", mr->setMTFParam);    
     nh.getParam("/depth_camera/check_thresh", mr->m_nAmplitude);
     nh.getParam("/depth_camera/scatter_thresh", mr->m_nScattering);
     nh.getParam("/depth_camera/min_depth", mr->m_nMinDepth);
     nh.getParam("/depth_camera/max_depth", mr->m_nMaxDepth);
 
-    ROS_INFO("DEBUG : %d\n", mr->debug);
+
     ROS_INFO("setMTFParam : %d\n", mr->setMTFParam);
 
     if (!mr->connect())
@@ -78,8 +73,6 @@ int main(int argc, char **argv)
     //to be in inverse proportion to the fps delay(nDelay) parameter.
     ros::Rate loop_rate(10);
 
-    //Ctrl+C handler for standalone TEST.
-    //It must be removed at Release version.
     signal(SIGINT, gracefulShutdown);
 
     ROS_INFO("Depth Camera Start\n");
