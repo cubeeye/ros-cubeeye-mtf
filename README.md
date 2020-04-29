@@ -37,25 +37,25 @@ $sudo mtfinstall.sh
 Connect the camera power and execute the following command
 
 ```bash
-$roslaunch depth_mtf depth_camera.launch
+$roslaunch cubeeye_mtf depth_camera.launch
 ```
 
 #### Topics
-- /depth/mtf/amplitude_raw : IR Image
-- /depth/mtf/depth_raw : Depth Image
-- /detph/mtf/points : Point Cloud Image
+- /cubeeye/mtf/amplitude_raw : IR Image
+- /cubeeye/mtf/depth_raw : Depth Image
+- /cubeeye/mtf/points : Point Cloud Image
 
 #### Operating Test
 ```bash
 $rqt
-/depth/mtf/amplitude_raw, /depth/mtf/depth_raw
+/cubeeye/mtf/amplitude_raw, /cubeeye/mtf/depth_raw
 ```
 <p align="center"><img width=100% src="https://user-images.githubusercontent.com/18589471/67537195-4d1a0400-f6a8-11e9-8768-5fcf0e612862.png"/></p>
 
 ```bash
 $rosrun rviz rviz
 Fixed Frame : pcl
-PointCloud2 : /depth/mtf/points
+PointCloud2 : /cubeeye/mtf/points
 ```
 <p align="center"><img width=100% src="https://user-images.githubusercontent.com/18589471/67537595-1a710b00-f6aa-11e9-8768-f5e8da62224b.png"/></p>
 
